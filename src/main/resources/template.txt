@@ -1,0 +1,4 @@
+Server,Database Driver,Database URL,Database Username,Database Password,LDAP URL,LDAP Bind DN,LDAP Bind Password
+[# th:each="server : ${servers}"]
+[(${server.name})],"[(${server.database.driverClassName})]"
+[/]
