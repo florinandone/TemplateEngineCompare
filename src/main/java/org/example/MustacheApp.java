@@ -8,7 +8,8 @@ import org.yaml.snakeyaml.Yaml;
 import java.io.*;
 import java.util.Map;
 
-public class MustacheCsvGenerator {
+public class MustacheApp {
+
     public static void main(String[] args) throws IOException {
         // Load the YAML configuration from a file using FileInputStream
         InputStream inputStream = new FileInputStream("src/main/resources/config.yaml");
@@ -21,11 +22,8 @@ public class MustacheCsvGenerator {
         // Load the Mustache template
         Mustache mustache = mustacheFactory.compile("template.mustache");
 
-        // Create a writer to capture the generated CSV content
-        StringWriter writer = new StringWriter();
-
-        // Define the output CSV file name
-        String outputFileName = "mustache-output.csv";
+       // Define the output CSV file name
+        String outputFileName = Constants.OUTPUT_DIR + "mustache_output.csv";
 
         // Render the template and write the result to the output file
         try (FileWriter fileWriter = new FileWriter(outputFileName)) {

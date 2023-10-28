@@ -11,11 +11,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
 
-public class SampleThymeleafConfigApp {
+public class ThymeleafTextApp {
     public static void main(String[] args) throws IOException {
         // Load configuration from the YAML file
         Yaml yaml = new Yaml();
-        try (InputStream in = SampleThymeleafConfigApp.class.getResourceAsStream("/config.yaml")) {
+        try (InputStream in = ThymeleafTextApp.class.getResourceAsStream("/config.yaml")) {
             Map<String, Object> config = yaml.load(in);
 
             // Initialize Thymeleaf template resolver
@@ -32,10 +32,10 @@ public class SampleThymeleafConfigApp {
             context.setVariables(config);
 
             // Process the Thymeleaf template
-            String csvContent = templateEngine.process("template", context);
+            String csvContent = templateEngine.process("thymeleaf_text_template", context);
 
             // Define the output CSV file name
-            String outputFileName = "output.csv";
+            String outputFileName = Constants.OUTPUT_DIR + "thymeleaf_text_output.csv";
 
             // Write the CSV content to the output file in the same folder
             try (FileWriter writer = new FileWriter(outputFileName)) {
