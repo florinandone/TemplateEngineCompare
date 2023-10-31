@@ -15,7 +15,7 @@ public class ThymeleafTextApp {
     public static void main(String[] args) throws IOException {
         // Load configuration from the YAML file
         Yaml yaml = new Yaml();
-        try (InputStream in = ThymeleafTextApp.class.getResourceAsStream("/config.yaml")) {
+        try (InputStream in = ThymeleafTextApp.class.getResourceAsStream("/config/config.yaml")) {
             Map<String, Object> config = yaml.load(in);
 
             // Initialize Thymeleaf template resolver

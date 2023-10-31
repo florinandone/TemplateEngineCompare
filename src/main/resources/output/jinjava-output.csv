@@ -4,3 +4,12 @@ Server,Database Driver,Database URL,Database Username,Database Password,LDAP URL
 
   "{name=Server2, database={driverClassName=org.postgresql.Driver, url=jdbc:postgresql://localhost:5432/otherdb, username=otheruser, password=otherpassword}, ldap={ldapUrl=ldap://ldap2.example.com:389, bindDn=cn=admin,dc=example,dc=com, bindPassword=otherldapadminpassword}}","","","","","","",""
 
+
+imported content
+
+    imported "Server1"
+
+    imported "Server2"
+
+
+

@@ -2,3 +2,5 @@ Server,Database Driver,Database URL,Database Username,Database Password,LDAP URL
 {% for server in servers %}
   "{{ server }}","{{ config.database.driverClassName }}","{{ config.database.url }}","{{ config.database.username }}","{{ config.database.password }}","{{ config.ldap.ldapUrl }}","{{ config.ldap.bindDn }}","{{ config.ldap.bindPassword }}"
 {% endfor %}
+
+{% include 'jinja_template-imported.j2' %}

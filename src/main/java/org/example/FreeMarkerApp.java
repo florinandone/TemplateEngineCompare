@@ -13,7 +13,7 @@ public class FreeMarkerApp {
     public static void main(String[] args) throws IOException, TemplateException {
         // Load configuration from the YAML file
         Yaml yaml = new Yaml();
-        try (InputStream in = FreeMarkerApp.class.getResourceAsStream("/config.yaml")) {
+        try (InputStream in = FreeMarkerApp.class.getResourceAsStream("/config/config.yaml")) {
             Map<String, Object> config = yaml.load(in);
 
             // Create a FreeMarker configuration
