@@ -1,4 +1,5 @@
 Server,Database Driver,Database URL,Database Username,Database Password,LDAP URL,LDAP Bind DN,LDAP Bind Password
 #foreach ($server in $servers)
-"$server","$config.database.driverClassName","$config.database.url","$config.database.username","$config.database.password","$config.ldap.ldapUrl","$config.ldap.bindDn","$config.ldap.bindPassword"
+"$server.name","$server.database.driverClassName","$server.database.url","$server.database.username","$server.database.password","$server.ldap.ldapUrl","$server.ldap.bindDn","$server.ldap.bindPassword"
 #end
+#parse("src/main/resources/velocity_template_imported.vm")

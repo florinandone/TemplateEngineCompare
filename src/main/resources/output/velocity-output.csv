@@ -1,3 +1,6 @@
 Server,Database Driver,Database URL,Database Username,Database Password,LDAP URL,LDAP Bind DN,LDAP Bind Password
-"{name=Server1, database={driverClassName=com.mysql.jdbc.Driver, url=jdbc:mysql://localhost:3306/mydb, username=dbuser, password=dbpassword}, ldap={ldapUrl=ldap://ldap.example.com:389, bindDn=cn=admin,dc=example,dc=com, bindPassword=ldapadminpassword}}","$config.database.driverClassName","$config.database.url","$config.database.username","$config.database.password","$config.ldap.ldapUrl","$config.ldap.bindDn","$config.ldap.bindPassword"
-"{name=Server2, database={driverClassName=org.postgresql.Driver, url=jdbc:postgresql://localhost:5432/otherdb, username=otheruser, password=otherpassword}, ldap={ldapUrl=ldap://ldap2.example.com:389, bindDn=cn=admin,dc=example,dc=com, bindPassword=otherldapadminpassword}}","$config.database.driverClassName","$config.database.url","$config.database.username","$config.database.password","$config.ldap.ldapUrl","$config.ldap.bindDn","$config.ldap.bindPassword"
+"Server1","com.mysql.jdbc.Driver","jdbc:mysql://localhost:3306/mydb","dbuser","dbpassword","ldap://ldap.example.com:389","cn=admin,dc=example,dc=com","ldapadminpassword"
+"Server2","org.postgresql.Driver","jdbc:postgresql://localhost:5432/otherdb","otheruser","otherpassword","ldap://ldap2.example.com:389","cn=admin,dc=example,dc=com","otherldapadminpassword"
+imported sample
+imported "Server1"
+imported "Server2"
